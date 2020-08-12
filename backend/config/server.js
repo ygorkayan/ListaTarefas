@@ -10,7 +10,4 @@ app.use(express.json());
 
 app.use(routerTarefas);
 
-const porta = 5000;
-app.listen(porta, () => {
-  console.log(`Servidor Iniciado na porta ${porta}`);
-});
+app.listen(5000, () => console.log(`Servidor Online, Porta 5000`));
