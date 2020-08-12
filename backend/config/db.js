@@ -2,11 +2,17 @@ const mysql = require("mysql");
 const sql = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "95825541",
+  password: "senha",
   database: "tarefas",
 });
 
-sql.connect(() => console.log("Banco de Dados Online"));
+sql.connect((err) => {
+  if (err) {
+    console.log("Banco de Dados Offline");
+  } else {
+    console.log("Banco de Dados Online");
+  }
+});
 
 module.exports = sql;
 
